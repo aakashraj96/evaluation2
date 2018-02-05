@@ -1,0 +1,32 @@
+{
+  "name": "evaluation2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aakashraj96/evaluation2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aakashraj96/evaluation2/issues"
+  },
+  "homepage": "https://github.com/aakashraj96/evaluation2#readme",
+  "dependencies": {
+    "hapi": "^16.6.2",
+    "pg": "^7.4.1",
+    "sequelize": "^4.32.6",
+    "sequelize-cli": "^3.2.0"
+  },
+  "devDependencies": {
+    "eslint-config-airbnb": "^16.1.0",
+    "jest": "^22.1.4",
+    "eslint": "^4.16.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0"
+  }
+}
