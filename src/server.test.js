@@ -7,8 +7,19 @@ describe('Testing server', () => {
       url: '/getBooks',
     };
     Server.inject(options, (result) => {
-      console.log(result);
+      // console.log(result);
       expect(result.statusCode).toBe(200);
+      // Models.users.destroy({ truncate: true });
+    });
+  });
+  test('Testing API 1 call', () => {
+    const options = {
+      method: 'GET',
+      url: '/getBooks',
+    };
+    Server.inject(options, (response) => {
+      // console.log(response.result.resposeFromApi1);
+      expect(response.result.responseFromApi1).toContain('Harry');
       // Models.users.destroy({ truncate: true });
     });
   });
