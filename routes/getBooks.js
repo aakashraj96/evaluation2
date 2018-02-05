@@ -1,4 +1,5 @@
 const https = require('https');
+const Models = require('../models');
 
 let api1Data = {};
 
@@ -36,6 +37,21 @@ module.exports = [{
           });
         });
       }
+    });
+  },
+},
+{
+  method: 'Get',
+  path: '/insertData',
+  handler: (req, reply) => {
+    api1Data.books.forEach((element) => {
+      Models.books.create({
+        author: element.Author,
+        bookid: element.id,
+        name: element.Name,
+        rating: element.rating,
+        like: 0,
+      }).then(reply('success'));
     });
   },
 }];
