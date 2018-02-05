@@ -12,14 +12,25 @@ describe('Testing server', () => {
       // Models.users.destroy({ truncate: true });
     });
   });
-  test('Testing API 1 call', () => {
+  // test('Testing API 1 call', () => {
+  //   const options = {
+  //     method: 'GET',
+  //     url: '/getBooks',
+  //   };
+  //   Server.inject(options, (response) => {
+  //     console.log(response.result.message);
+  //     expect(response.result.message).toContain('Harry');
+  //     // Models.users.destroy({ truncate: true });
+  //   });
+  // });
+  test('Testing API 2 call', () => {
     const options = {
       method: 'GET',
       url: '/getBooks',
     };
     Server.inject(options, (response) => {
-      // console.log(response.result.resposeFromApi1);
-      expect(response.result.responseFromApi1).toContain('Harry');
+      console.log(response.result.message.rating);
+      expect(response.result.message.rating).not.toBe(undefined);
       // Models.users.destroy({ truncate: true });
     });
   });
