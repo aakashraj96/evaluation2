@@ -8,7 +8,7 @@ describe('Testing server', () => {
     };
     Server.inject(options, (result) => {
       console.log(result);
-      expect(result.statusCode).toContain(false);
+      expect(result.statusCode).toBe(200);
       // Models.users.destroy({ truncate: true });
     });
   });
