@@ -1,17 +1,16 @@
-
+'use strict';
 module.exports = (sequelize, DataTypes) => {
-  const books = sequelize.define('books', {
+  var books = sequelize.define('books', {
     author: DataTypes.STRING,
     bookid: DataTypes.INTEGER,
     name: DataTypes.STRING,
-    rating: DataTypes.DECIMAL,
-    like: DataTypes.INTEGER,
+    rating: DataTypes.DECIMAL
   }, {
     classMethods: {
-      associate(models) {
+      associate: function(models) {
         // associations can be defined here
-      },
-    },
+      }
+    }
   });
   return books;
 };

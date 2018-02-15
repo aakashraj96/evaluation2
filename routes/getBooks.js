@@ -51,7 +51,7 @@ module.exports = [{
         name: element.Name,
         rating: element.rating,
         like: 0,
-      }).then(reply('success'));
+      });
     });
   },
 }];
