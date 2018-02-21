@@ -1,4 +1,3 @@
-const http = require('http');
 const Hapi = require('hapi');
 const Routes = require('../routes/index');
 

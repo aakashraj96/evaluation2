@@ -17,16 +17,19 @@
   },
   "homepage": "https://github.com/aakashraj96/evaluation2#readme",
   "dependencies": {
+    "eslint": "^4.18.1",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0",
     "hapi": "^16.6.2",
     "pg": "^7.4.1",
+    "request": "^2.83.0",
     "sequelize": "^4.32.6",
     "sequelize-cli": "^3.2.0"
   },
   "devDependencies": {
     "eslint-config-airbnb": "^16.1.0",
-    "jest": "^22.1.4",
-    "eslint": "^4.16.0",
     "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-plugin-import": "^2.8.0"
+    "eslint-plugin-import": "^2.8.0",
+    "jest": "^22.1.4"
   }
 }

@@ -36,7 +36,7 @@ describe('Testing server', () => {
   });
   test('Testing Json output, Expected : Object grouped by author names with rating', () => {
     const options = {
-      method: 'GET',
+      method: 'POST',
       url: '/getBooks',
     };
     Server.inject(options, (response) => {
