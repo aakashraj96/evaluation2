@@ -79,6 +79,7 @@ module.exports = [{
   method: 'POST',
   path: '/insertData',
   handler: (req, reply) => {
+    console.log('insertDAta');
     const promise = getAllBooksData();
     promise.then((api1Data) => {
       const promiseArray = getBookRatings(api1Data);
@@ -135,6 +136,10 @@ module.exports = [{
     const likesArray = [];
     const promiseArray = [];
     Models.books.findAll().then((data) => {
+      if (data.length === 0) {
+        console.log('null response');
+        reply({ msg: 'none here' });
+      }
       let count = 0;
       const booksWithRatings = [];
       data.map((element, i) => {
@@ -154,6 +159,7 @@ module.exports = [{
           booksWithRatings.push(element);
           count++;
           if (count === data.length) {
+            // reply.writeHead(200, { 'Content-Type': 'application/json' });
             reply(groupByAuthor(booksWithRatings));
           }
         });
