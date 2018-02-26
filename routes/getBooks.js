@@ -100,13 +100,14 @@ module.exports = [{
   method: 'POST',
   path: '/like',
   handler: (req, reply) => {
+    console.log(req.payload.bookid);
     Models.likes.destroy({
       where: {
-        bookid: req.payload.bookid,
+        bookid: req.payload.bookid.toString(),
       },
     }).then(() => {
       Models.likes.create({
-        bookid: req.payload.bookid,
+        bookid: req.payload.bookid.toString(),
         like: 1,
       }).then(reply('liked'));
     });
@@ -118,12 +119,12 @@ module.exports = [{
   handler: (req, reply) => {
     Models.likes.destroy({
       where: {
-        bookid: req.payload.bookid,
+        bookid: req.payload.bookid.toString(),
       },
     }).then((data) => {
       Models.likes.create({
-        bookid: req.payload.bookid,
-        like: -1,
+        bookid: req.payload.bookid.toString(),
+        like: 0,
       }).then(reply('disliked'));
     });
   },
